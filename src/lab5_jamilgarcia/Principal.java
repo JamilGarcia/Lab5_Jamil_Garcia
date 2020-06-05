@@ -700,9 +700,12 @@ public class Principal extends javax.swing.JFrame {
             debilidad = tf_PerDebilidad.getText();
             escua = Escuadrones.get(flag);
             Per = escua.getLista();
-            fuerza = sp_Fuerza.getComponentCount();
-            fisico = sp_Fisico.getComponentCount();
-            mental = sp_mental.getComponentCount();
+            fuerza = Integer.parseInt(sp_Fuerza.getText());
+            System.out.println(fuerza);
+            fisico = Integer.parseInt(sp_Fisico.getText());
+            System.out.println(fisico);
+            mental = Integer.parseInt(sp_Mental.getText());
+            System.out.println(mental);
             for (int i = 0; i < Personajes.size(); i++) {
                 if (nombre.equals(Personajes.get(i).getNombre())) {
                     Fnombre = false;
