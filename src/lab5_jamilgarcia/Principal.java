@@ -70,9 +70,6 @@ public class Principal extends javax.swing.JFrame {
         tf_PerPoder = new javax.swing.JTextField();
         tf_PerDebilidad = new javax.swing.JTextField();
         cb_Escuadron = new javax.swing.JComboBox<>();
-        sp_Fuerza = new javax.swing.JSpinner();
-        sp_Fisico = new javax.swing.JSpinner();
-        sp_mental = new javax.swing.JSpinner();
         b_PerModificar = new javax.swing.JButton();
         b_PerAgregar = new javax.swing.JButton();
         b_PerEliminar = new javax.swing.JButton();
@@ -82,6 +79,9 @@ public class Principal extends javax.swing.JFrame {
         jl_Villanos = new javax.swing.JList<>();
         b_ActualizarListas = new javax.swing.JButton();
         jLabel15 = new javax.swing.JLabel();
+        sp_Fuerza = new javax.swing.JTextField();
+        sp_Fisico = new javax.swing.JTextField();
+        sp_Mental = new javax.swing.JTextField();
         jPanel3 = new javax.swing.JPanel();
         jScrollPane4 = new javax.swing.JScrollPane();
         jt_Arbol = new javax.swing.JTree();
@@ -300,6 +300,24 @@ public class Principal extends javax.swing.JFrame {
 
         jLabel15.setText("Para modificar, toque el Elemento que quiera modificar, lo modifica y luego atualiza la tabla");
 
+        sp_Fuerza.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                sp_FuerzaActionPerformed(evt);
+            }
+        });
+
+        sp_Fisico.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                sp_FisicoActionPerformed(evt);
+            }
+        });
+
+        sp_Mental.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                sp_MentalActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -323,21 +341,19 @@ public class Principal extends javax.swing.JFrame {
                                     .addComponent(tf_PerPoder, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(tf_PerNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel11)
-                                    .addComponent(jLabel10)
-                                    .addComponent(jLabel9)
-                                    .addComponent(jLabel12))
+                                .addComponent(jLabel9)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(cb_Escuadron, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(sp_mental, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(cb_Escuadron, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addGroup(jPanel2Layout.createSequentialGroup()
-                                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                .addComponent(sp_Fuerza, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(sp_Fisico, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addGap(0, 0, Short.MAX_VALUE))))))
+                                    .addComponent(jLabel10)
+                                    .addComponent(jLabel11)
+                                    .addComponent(jLabel12))
+                                .addGap(18, 18, 18)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(sp_Mental, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(sp_Fisico, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(sp_Fuerza, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addGap(81, 81, 81)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -397,18 +413,18 @@ public class Principal extends javax.swing.JFrame {
                         .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(28, 28, 28)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(24, 24, 24)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel10)
                             .addComponent(sp_Fuerza, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(30, 30, 30)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGap(41, 41, 41)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel11)
                             .addComponent(sp_Fisico, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(35, 35, 35)
+                        .addGap(33, 33, 33)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel12)
-                            .addComponent(sp_mental, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(sp_Mental, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(42, 42, 42)
                         .addComponent(b_ActualizarListas))
@@ -610,9 +626,12 @@ public class Principal extends javax.swing.JFrame {
             debilidad = tf_PerDebilidad.getText();
             escua = Escuadrones.get(flag);
             Per = escua.getLista();
-            fuerza = sp_Fuerza.getComponentCount();
-            fisico = sp_Fisico.getComponentCount();
-            mental = sp_mental.getComponentCount();
+            fuerza = Integer.parseInt(sp_Fuerza.getText());
+            System.out.println(fuerza);
+            fisico = Integer.parseInt(sp_Fisico.getText());
+            System.out.println(fisico);
+            mental = Integer.parseInt(sp_Mental.getText());
+            System.out.println(mental);
             if (fuerza + fisico + mental == 100) {
                 Personajes.add(new SuperHSuperV(nombre, poder, debilidad, escua, fuerza, fisico, mental));
                 Per.add(new SuperHSuperV(nombre, poder, debilidad, escua, fuerza, fisico, mental));
@@ -659,9 +678,9 @@ public class Principal extends javax.swing.JFrame {
             tf_PerNombre.setText(Personajes.get(flag).getNombre());
             tf_PerPoder.setText(Personajes.get(flag).getPoder());
             tf_PerDebilidad.setText(Personajes.get(flag).getDebilidad());
-            sp_Fuerza.setValue(Personajes.get(flag).getFuerza());
-            sp_Fisico.setValue(Personajes.get(flag).getFisica());
-            sp_mental.setValue(Personajes.get(flag).getMental());
+            sp_Fuerza.setText(Personajes.get(flag).getFuerza()+"");
+            sp_Fisico.setText(Personajes.get(flag).getFisica()+"");
+            sp_Mental.setText(Personajes.get(flag).getMental() +"");
 
         } catch (Exception e) {
             JOptionPane.showMessageDialog(this, "Algo salio mal, llamar al administrador");
@@ -957,6 +976,18 @@ public class Principal extends javax.swing.JFrame {
         
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
+    private void sp_FuerzaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sp_FuerzaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_sp_FuerzaActionPerformed
+
+    private void sp_FisicoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sp_FisicoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_sp_FisicoActionPerformed
+
+    private void sp_MentalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sp_MentalActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_sp_MentalActionPerformed
+
 
     /**
      * @param args the command line arguments
@@ -1043,9 +1074,9 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JPopupMenu menu_popup;
     private javax.swing.JRadioButton rb_heroe;
     private javax.swing.JRadioButton rb_villano;
-    private javax.swing.JSpinner sp_Fisico;
-    private javax.swing.JSpinner sp_Fuerza;
-    private javax.swing.JSpinner sp_mental;
+    private javax.swing.JTextField sp_Fisico;
+    private javax.swing.JTextField sp_Fuerza;
+    private javax.swing.JTextField sp_Mental;
     private javax.swing.JTextField tf_EscuaLugar;
     private javax.swing.JTextField tf_EscuaNombre;
     private javax.swing.JTextField tf_PerDebilidad;
